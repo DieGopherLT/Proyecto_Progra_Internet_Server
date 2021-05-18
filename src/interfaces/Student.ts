@@ -4,9 +4,5 @@ export interface Student  {
     name: string;
     university: string;
     career: string;
-    profilePicture?: string | null;
-}
-
-export interface JWT_PAYLOAD{
-    student: Student;
+    profilePicture: string | null;
 }
