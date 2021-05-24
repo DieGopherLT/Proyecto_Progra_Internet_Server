@@ -28,7 +28,7 @@ export const saveProfileImage = async (req: Request<UploadParams>, res: Response
     try {
         if(filename){
             const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
-            const imageHost = `${host}/pictures/${filename}`;
+            const imageHost = `https://${host}/pictures/${filename}`;
             student.imagen = imageHost;
             await student.save();
             res.status(200).json({ msg: 'Image uploaded and database updated' });
