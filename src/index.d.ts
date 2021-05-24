@@ -2,8 +2,12 @@ import { JWT_PAYLOAD } from './interfaces/Student';
 
 declare global {
     namespace NodeJS {
-        interface ProcessEnv {
-            SECRET: string;
+        interface ProcessEnv{
+            DB_HOST: string;
+            DB_USERNAME: string;
+            DB_PASSWORD: string;
+            DB_NAME: string;
+            PORT: string | number;
         }
     }
 

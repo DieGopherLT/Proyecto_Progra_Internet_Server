@@ -1,11 +1,18 @@
 import express, { Router } from 'express';
+import multer from 'multer';
+import storage from '../config/multer';
 
+const upload = multer({ storage });
 const router: Router = express.Router();
 
-import { getProfileImage } from '../controller/uploadsController';
+import {
+    getProfileImage,
+    saveProfileImage,
+} from '../controller/uploadsController';
 
-router.get('/:code',
-    getProfileImage
-);
+router.post('/:code', upload.single('img'), saveProfileImage);
+
+router.get('/:code', getProfileImage);
+
 
 export default router;

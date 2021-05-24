@@ -1,44 +1,64 @@
-import { Request, Response } from 'express';
+import e, { Request, Response } from 'express';
 import * as base64 from 'node-base64-image';
+import path from 'path';
 
-import Student from '../model/Student';
+import Student from '../model/Student.model';
 
 import { UploadParams } from '../interfaces/Request/UploadRequest.interface';
 import { UploadResponse } from '../interfaces/Response.interface';
 
 
 // export const saveProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
-
+//
 //     const { params: { code } } = req;
-
+//
 //     try {
-//         if(req.file){
-//             const student = await Student.findOne({ where: { code }, rejectOnEmpty: true });
-//             student.profilePicture = req.file.filename;
-//             await student.save();
-//             res.status(200).json({ msg: 'Image uploaded' });
-//         }
-//         else
-//             res.status(400).json({ msg: 'Did not upload.' })
-//     } catch(e){
-//         console.log(e);
-//         res.status(500).json({ msg: 'Something went wrong' })
+//         const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
+//         student.imagen = `https://samdt.000webhostapp.com/imagenes/img-${student.Codigo}.jpg`;
+//         await student.save();
+//         res.status(200).json({ msg: 'Image URL saved in database' });
+//     } catch (error) {
+//         res.status(500).json({ msg: 'Something went wrong' });
 //     }
 // }
 
+export const saveProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
+    const { params: { code }, headers: { host }, file: { filename } } = req;
+
+    try {
+        if(filename){
+            const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
+            const imageHost = `${host}/pictures/${filename}`;
+            student.imagen = imageHost;
+            await student.save();
+            res.status(200).json({ msg: 'Image uploaded and database updated' });
+        }
+    } catch(e) {
+        console.log(e);
+        res.status(500).json({ msg: 'Something went wrong' });
+    }
+}
+
+//Returns image in base64 format
 export const getProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
 
     const { code } = req.params;
 
     try {
-        const student = await Student.findOne({ where: { code } });
+        const student = await Student.findOne({ where: { Codigo: code } });
+        if(student){
+            if(student.imagen !== ''){
+                //const path = `https://samdt.000webhostapp.com/imagenes/${student.imagen}`;
 
-        if(student && student.profilePicture){
-            const path = `https://samdt.000webhostapp.com/imagenes/${student.profilePicture}`;
-            const imageAsBase64 = await base64.encode(path, { string: true });
-            return res.status(200).json({ img: imageAsBase64, msg: 'Take yor picture' });
+                //Si es una imagen hospedada en internet, no hace falta el protocolo file
+                const imageAsBase64 = await base64.encode(`${ student.imagen }`, { string: true });
+                return res.status(200).json({ img: imageAsBase64, msg: 'Take yor picture' });
+            }
+            else
+                return res.status(404).json({ img: null, msg: 'There is no picture' });
         }
-        return res.status(404).json({ img: null, msg: 'There is no picture' });
+        else
+            return res.status(404).json({ img: null, msg: 'There is no student' });
     } catch(e) {
         console.log(e);
         res.status(500).json({ msg: 'Something went wrong' });

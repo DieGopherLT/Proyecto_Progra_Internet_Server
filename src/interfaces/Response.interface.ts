@@ -5,6 +5,5 @@ export interface UploadResponse{
 
 export interface StudentResponse{
     msg?: string;
-    token?: string;
     studentCreated?: boolean;
 }
