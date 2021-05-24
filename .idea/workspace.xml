@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59d89a0d-1c0b-4cc4-8e56-a179320f49c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/multer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/picture.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/Server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/db.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/studentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/studentController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/uploadsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/uploadsController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Request/StudentRequest.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Request/StudentRequest.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Request/UploadRequest.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Request/UploadRequest.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/student.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/student.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/uploads.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/uploads.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +76,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -53,7 +53,7 @@ class Server{
 
     start(){
         // @ts-ignore
-        const PORT = process.env.PORT | 4000;
+        const PORT = process.env.PORT || 4000;
         this.app.listen(PORT, () => {
             console.log(`Server working on port ${PORT}`);
         });
