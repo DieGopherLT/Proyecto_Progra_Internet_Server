@@ -35,9 +35,12 @@ export const deleteStudent = async (req: Request<StudentParams>, res: Response<S
 
     try {
         const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
-        const imagePath = path.join(__dirname, `../../../uploads/img-${student.Codigo}.jpg`);
 
-        fs.unlinkSync(imagePath);
+        if(student.imagen.includes(student.Codigo)){
+            const imagePath = path.join(__dirname, `../../../uploads/img-${student.Codigo}.jpg`);
+            fs.unlinkSync(imagePath);
+        }
+
         await student.destroy();
         res.status(200).json({ msg: 'Student eliminated from database and its picture from server' });
     } catch(e) {
