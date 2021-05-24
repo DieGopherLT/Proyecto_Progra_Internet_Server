@@ -10,7 +10,7 @@
         "start": "node dist/index.js",
         "postinstall": "tsc",
         "dev": "tsc & concurrently \" tsc --watch \"   \" nodemon dist/index.js \" ",
-        "deploy": "git add . && git commit && git push heroku master"
+        "deploy": "git add . && git commit && git push heroku main"
     },
     "devDependencies": {
         "@types/express": "^4.17.11",
