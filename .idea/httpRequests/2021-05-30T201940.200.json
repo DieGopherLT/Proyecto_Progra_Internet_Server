@@ -1,0 +1,52 @@
+{
+    "positionList": [
+        {
+            "student": {
+                "id": 6,
+                "Codigo": "216073466",
+                "Nombre": "JONATHAN ALEJANDRO PONCE VAZQUEZ",
+                "imagen": "https://nymphomaniacal-choc.000webhostapp.com/imagenes/60ae75242c54d.png",
+                "Tiempo": "00:10",
+                "Distancia": "900"
+            },
+            "speed": 90,
+            "place": 1
+        },
+        {
+            "student": {
+                "id": 65,
+                "Codigo": "215861487",
+                "Nombre": "EDUARDO IVAN LUNA ROPON",
+                "imagen": "https://polar-improvement.000webhostapp.com/imagenes/60b0269eb3f10.png",
+                "Tiempo": "00:47",
+                "Distancia": "2357"
+            },
+            "speed": 50.15,
+            "place": 2
+        },
+        {
+            "student": {
+                "id": 39,
+                "Codigo": "216130494",
+                "Nombre": "JORGE LUIS CHAVEZ ALVARADO",
+                "imagen": "https://icykitty.000webhostapp.com/imagenes/60afce769645f.png",
+                "Tiempo": "01:33",
+                "Distancia": "3794"
+            },
+            "speed": 40.8,
+            "place": 3
+        }
+    ],
+    "studentPlace": {
+        "student": {
+            "id": 3,
+            "Codigo": "215672951",
+            "Nombre": "DIEGO LOPEZ TORRES",
+            "imagen": "https://progra-internet-server.herokuapp.com/pictures/img-215672951.jpg",
+            "Tiempo": "01:00",
+            "Distancia": "1000"
+        },
+        "speed": 16.67,
+        "place": 18
+    }
+}

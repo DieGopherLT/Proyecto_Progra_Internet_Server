@@ -7,6 +7,8 @@ import Student from '../model/Student.model';
 import { StudentBody, StudentParams } from '../interfaces/Request/StudentRequest.interface';
 import { StudentResponse } from '../interfaces/Response.interface';
 import student from '../routes/student';
+import { StudentRecord } from '../interfaces/StudentRecord.interface';
+import { currentStudentRecordPromise, studentRecordListPromise } from '../helpers/controllers/studentController.helper';
 
 export const createStudent = async (req: Request<any, any, StudentBody>, res: Response<StudentResponse>) => {
 
@@ -43,6 +45,43 @@ export const deleteStudent = async (req: Request<StudentParams>, res: Response<S
 
         await student.destroy();
         res.status(200).json({ msg: 'Student eliminated from database and its picture from server' });
+    } catch(e) {
+        console.log(e);
+        res.status(500).json({ msg: 'Something went wrong' });
+    }
+}
+
+export const listStudentPosition = async (req: Request<StudentParams>, res: Response<StudentResponse>) => {
+
+    const { params: { code } } = req;
+
+    try {
+        const allStudentsList = Student.findAll();
+        const singleStudent = Student.findOne({ where: { Codigo: code } });
+        let place = 1;
+
+        const [studentList, student] = await Promise.all([allStudentsList, singleStudent]);
+        let [studentRecordList, currentStudentRecord] = await Promise.all([
+            studentRecordListPromise(studentList),
+            currentStudentRecordPromise(student)
+        ]);
+
+        const sortedStudentRecordList = studentRecordList.sort((a, b) => b.speed - a.speed);
+        const designatedStudentRecordList = sortedStudentRecordList.map(student => {
+            if(student.student.Codigo === code)
+                currentStudentRecord.place = place;
+            student.place = place++;
+            return student;
+        });
+        const firstThreeStudents = designatedStudentRecordList.slice(0, 3);
+
+        if(firstThreeStudents.some(record => record.place === currentStudentRecord.place))
+            return res.status(200).json({ positionList: firstThreeStudents });
+        
+        return res.status(200).json({
+            positionList: firstThreeStudents,
+            studentPlace: currentStudentRecord
+        });
     } catch(e) {
         console.log(e);
         res.status(500).json({ msg: 'Something went wrong' });
