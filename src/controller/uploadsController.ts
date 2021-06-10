@@ -7,7 +7,7 @@ import { UploadParams } from '../interfaces/Request/UploadRequest.interface';
 import { UploadResponse } from '../interfaces/Response.interface';
 
 export const saveProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
-    const { params: { code }, headers: { host }, file: { filename } } = req;
+    const { params: { code }, file: { filename } } = req;
 
     try {
         if(filename){
