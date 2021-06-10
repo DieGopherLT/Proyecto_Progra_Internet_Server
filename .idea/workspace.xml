@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59d89a0d-1c0b-4cc4-8e56-a179320f49c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/StudentRecord.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/studentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/studentController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/uploadsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/uploadsController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/student.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/student.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/uploads.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/uploads.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -91,6 +96,7 @@
       <workItem from="1622418369879" duration="5500000" />
       <workItem from="1622467548282" duration="4441000" />
       <workItem from="1622571024269" duration="8000" />
+      <workItem from="1623284220543" duration="4387000" />
     </task>
     <servers />
   </component>

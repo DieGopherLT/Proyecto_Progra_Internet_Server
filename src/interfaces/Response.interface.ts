@@ -11,4 +11,6 @@ export interface StudentResponse{
     studentCreated?: boolean;
     positionList?: StudentRecord[];
     studentPlace?: StudentRecord;
+    currentStudentPlace?: number;
+    lastPlace?: number;
 }

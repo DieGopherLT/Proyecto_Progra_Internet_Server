@@ -10,7 +10,7 @@ import {
     saveProfileImage,
 } from '../controller/uploadsController';
 
-router.post('/:code', upload.single('img'), saveProfileImage);
+router.post('/:code', saveProfileImage);
 
 router.get('/:code', getProfileImage);
 

@@ -1,26 +1,10 @@
-import e, { Request, Response } from 'express';
+import { Request, Response } from 'express';
 import * as base64 from 'node-base64-image';
-import path from 'path';
 
 import Student from '../model/Student.model';
 
 import { UploadParams } from '../interfaces/Request/UploadRequest.interface';
 import { UploadResponse } from '../interfaces/Response.interface';
-
-
-// export const saveProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
-//
-//     const { params: { code } } = req;
-//
-//     try {
-//         const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
-//         student.imagen = `https://samdt.000webhostapp.com/imagenes/img-${student.Codigo}.jpg`;
-//         await student.save();
-//         res.status(200).json({ msg: 'Image URL saved in database' });
-//     } catch (error) {
-//         res.status(500).json({ msg: 'Something went wrong' });
-//     }
-// }
 
 export const saveProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
     const { params: { code }, headers: { host }, file: { filename } } = req;
@@ -28,8 +12,7 @@ export const saveProfileImage = async (req: Request<UploadParams>, res: Response
     try {
         if(filename){
             const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
-            const imageHost = `https://${host}/pictures/${filename}`;
-            student.imagen = imageHost;
+            student.imagen = `https://samdt.000webhostapp.com/imagenes/img-${ student.Codigo }.jpg`;
             await student.save();
             res.status(200).json({ msg: 'Image uploaded and database updated' });
         }

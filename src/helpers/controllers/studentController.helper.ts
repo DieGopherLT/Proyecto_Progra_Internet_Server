@@ -30,3 +30,22 @@ export const currentStudentRecordPromise = (student: StudentInstance | null): Pr
         }
     })
 }
+
+export const currentStudentPositionPromise = (studentRecordList: StudentRecord[], code: string): Promise<number> => {
+    return new Promise(resolve => {
+        const currentStudentPosition = studentRecordList.findIndex(({ student }) => student.Codigo === code);
+        resolve(currentStudentPosition);
+    })
+}
+
+export const currentStudentPromise = (studentRecordList: StudentRecord[], code: string): Promise<StudentRecord> => {
+    return new Promise((resolve, reject) => {
+        const currentStudentRecord = studentRecordList.filter(({ student }) => student.Codigo === code);
+        if(currentStudentRecord){
+            const [ record ] = currentStudentRecord;
+            resolve(record);
+        }
+        else
+            reject('Student not found');
+    })
+}
