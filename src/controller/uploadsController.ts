@@ -1,16 +1,15 @@
 import { Request, Response } from 'express';
-
 import Student from '../model/Student.model';
 
 import { UploadParams } from '../interfaces/Request/UploadRequest.interface';
 import { UploadResponse } from '../interfaces/Response.interface';
 
-export const saveProfileImage = async (req: Request<UploadParams>, res: Response<UploadResponse>) => {
-    const { params: { code } } = req;
-
+export const saveProfileImage = async (req: Request<UploadParams, any, any>, res: Response<UploadResponse>) => {
+    const { params: { code }, body: { filename } } = req;
+    
     try {
         const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
-        student.imagen = `https://samdt.000webhostapp.com/imagenes/img-${ student.Codigo }.jpg`;
+        student.imagen = `https://samdt.000webhostapp.com/imagenes/${ filename }`;
         await student.save();
         res.status(200).json({ msg: 'Database updated' });
     } catch(e) {
