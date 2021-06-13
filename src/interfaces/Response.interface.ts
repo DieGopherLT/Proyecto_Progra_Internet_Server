@@ -10,7 +10,7 @@ export interface StudentResponse{
     msg?: string;
     studentCreated?: boolean;
     positionList?: StudentRecord[];
-    studentPlace?: StudentRecord;
+    studentPlace?: StudentRecord | null;
     currentStudentPlace?: number;
     lastPlace?: number;
 }

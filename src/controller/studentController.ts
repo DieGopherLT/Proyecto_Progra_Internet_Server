@@ -80,7 +80,7 @@ export const listStudentPosition = async (req: Request<StudentParams>, res: Resp
         const firstThreeStudents = designatedStudentRecordList.slice(0, 3);
 
         if(firstThreeStudents.some(record => record.place === currentStudentRecord.place))
-            return res.status(200).json({ positionList: firstThreeStudents });
+            return res.status(200).json({ positionList: firstThreeStudents, studentPlace: null });
 
         return res.status(200).json({
             positionList: firstThreeStudents,
