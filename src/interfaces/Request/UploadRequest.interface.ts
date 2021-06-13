@@ -4,3 +4,7 @@ export interface UploadParams extends ParamsDictionary{
     code: string;
     image: string;
 }
+
+export interface UploadBody{
+    filename: string;
+}

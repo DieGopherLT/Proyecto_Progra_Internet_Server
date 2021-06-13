@@ -9,7 +9,7 @@ import '../model/Student.model';
 //Routing
 import UploadRouter from '../routes/uploads';
 import StudentRouter from '../routes/student';
-import PicturesRouter from '../routes/picture';
+// import PicturesRouter from '../routes/picture';
 
 class Server{
 
@@ -17,7 +17,7 @@ class Server{
     private readonly apiPaths = {
         upload: '/api/upload',
         student: '/api/student',
-        pictures: '/pictures'
+        // pictures: '/pictures'
     }
 
     constructor(){
@@ -48,7 +48,7 @@ class Server{
         this.app.get('/', (req, res) => res.send('Server working'));
         this.app.use(this.apiPaths.upload, UploadRouter);
         this.app.use(this.apiPaths.student, StudentRouter);
-        this.app.use(this.apiPaths.pictures, PicturesRouter);
+        // this.app.use(this.apiPaths.pictures, PicturesRouter);
     }
 
     start(){
