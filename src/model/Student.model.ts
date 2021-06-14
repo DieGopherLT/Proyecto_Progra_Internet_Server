@@ -8,9 +8,10 @@ export interface StudentAttributes {
     imagen: string;
     Tiempo: string;
     Distancia: string;
+    fecha: string;
 }
 
-interface StudentCreationAttributes extends Optional<StudentAttributes, 'id' | 'imagen' | 'Tiempo' | 'Distancia'> {}
+interface StudentCreationAttributes extends Optional<StudentAttributes, 'id' | 'imagen' | 'Tiempo' | 'Distancia' | 'fecha'> {}
 
 export interface StudentInstance extends Model<StudentAttributes, StudentCreationAttributes>, StudentAttributes {}
 
@@ -43,6 +44,9 @@ const Student: ModelCtor<StudentInstance> = db.define<StudentInstance>(process.e
         type: DataTypes.STRING(10),
         allowNull: false,
         defaultValue: '0'
+    },
+    fecha: {
+        type: DataTypes.STRING(10)
     }
 },{
     timestamps: false,

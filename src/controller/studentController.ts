@@ -10,7 +10,7 @@ import { StudentRecord } from '../interfaces/StudentRecord.interface';
 import {
     currentStudentPositionPromise, currentStudentPromise,
     currentStudentRecordPromise,
-    studentRecordListPromise,
+    studentRecordListPromise, transformDataFormat,
 } from '../helpers/controllers/studentController.helper';
 import { MergeSort } from '../helpers';
 
@@ -106,10 +106,12 @@ export const getStudentPosition = async (req: Request<StudentParams>, res: Respo
             currentStudentPromise(sortedRecordStudentList, code)
         ]);
         const lastPlace = sortedRecordStudentList.length - 1;
+        const date = transformDataFormat(currentStudent.student.fecha);
 
         res.status(200).json({
             currentStudentPlace: currentStudentPlace + 1,
             lastPlace,
+            date,
             studentPlace: currentStudent
         });
 

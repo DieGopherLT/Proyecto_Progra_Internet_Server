@@ -13,4 +13,5 @@ export interface StudentResponse{
     studentPlace?: StudentRecord | null;
     currentStudentPlace?: number;
     lastPlace?: number;
+    date?: string;
 }

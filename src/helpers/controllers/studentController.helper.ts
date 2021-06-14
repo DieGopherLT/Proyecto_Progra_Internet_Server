@@ -49,3 +49,17 @@ export const currentStudentPromise = (studentRecordList: StudentRecord[], code: 
             reject('Student not found');
     })
 }
+
+export const transformDataFormat = (date: string) => {
+    const split = date.split('-');
+    let [day, month, year] = split;
+
+    if(month.length === 1)
+        month = `0${ month }`;
+    if(day.length === 1)
+        day = `0${ day }`;
+
+    // 1988-03-21
+    return `${ year }-${ month }-${ day }`;
+
+}
