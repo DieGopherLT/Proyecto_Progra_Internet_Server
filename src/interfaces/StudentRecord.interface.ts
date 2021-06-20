@@ -1,4 +1,4 @@
-import { StudentInstance } from '../model/Student.model';
+import { StudentInstance } from '../models/StudentsDatabase/Student.model';
 
 export interface StudentRecord{
     student: StudentInstance;

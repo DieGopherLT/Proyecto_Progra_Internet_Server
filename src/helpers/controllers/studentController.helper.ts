@@ -1,5 +1,5 @@
 import { StudentRecord } from '../../interfaces/StudentRecord.interface';
-import { StudentInstance } from '../../model/Student.model';
+import { StudentInstance } from '../../models/StudentsDatabase/Student.model';
 
 const getStudentRecord = (student: StudentInstance): StudentRecord => {
     const seconds: number = parseInt(student.Tiempo);

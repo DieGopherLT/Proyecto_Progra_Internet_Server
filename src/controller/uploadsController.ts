@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Student from '../model/Student.model';
+import Student from '../models/StudentsDatabase/Student.model';
 
 import { UploadBody, UploadParams } from '../interfaces/Request/UploadRequest.interface';
 import { UploadResponse } from '../interfaces/Response.interface';

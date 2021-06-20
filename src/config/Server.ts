@@ -1,15 +1,18 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 
-import db from './db';
+import studentsDb from './database/studentsDb';
+import verifyDb from './database/verifyDb';
 
 //Models
-import '../model/Student.model';
+import '../models/StudentsDatabase/Student.model';
+import '../models/VerifyDatabase/ProgressData.model';
 
 //Routing
 import UploadRouter from '../routes/uploads';
 import StudentRouter from '../routes/student';
 // import PicturesRouter from '../routes/picture';
+import ProgressRouter from '../routes/progress';
 
 class Server{
 
@@ -17,21 +20,23 @@ class Server{
     private readonly apiPaths = {
         upload: '/api/upload',
         student: '/api/student',
-        // pictures: '/pictures'
+        progress: '/api/progress'
     }
 
     constructor(){
         this.app = express();
 
-        this.connectDatabase();
+        this.connectDatabases();
         this.middlewares();
         this.routes();
     }
 
-     private async connectDatabase(){
+     private async connectDatabases(){
         try {
-            await db.authenticate({ logging: false });
-            console.log('Database connected');
+            await studentsDb.authenticate({ logging: false });
+            console.log('Students database connected');
+            await verifyDb.sync({ logging: false });
+            console.log('Verify database connected');
         } catch (error) {
             console.log(error);
             process.exit(1);
@@ -49,6 +54,7 @@ class Server{
         this.app.use(this.apiPaths.upload, UploadRouter);
         this.app.use(this.apiPaths.student, StudentRouter);
         // this.app.use(this.apiPaths.pictures, PicturesRouter);
+        this.app.use(this.apiPaths.progress, ProgressRouter);
     }
 
     start(){

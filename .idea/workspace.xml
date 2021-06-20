@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59d89a0d-1c0b-4cc4-8e56-a179320f49c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/config/database/verifyDb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/progressController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Request/ProgressRequest.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/VerifyDatabase/ProgressData.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/progress.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/Server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database/studentsDb.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/studentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/studentController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/uploadsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/uploadsController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Student.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/StudentRecord.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/StudentRecord.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Student.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StudentsDatabase/Student.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +70,22 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\buyey\Documents\Universidad\Programacion para internet\ActividadSiete\ActividadSieteServer\uploads" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\buyey\Documents\Universidad\Programacion para internet\ActividadSiete\ActividadSieteServer\src\models\StudentsDatabase" />
+      <recent name="C:\Users\buyey\Documents\Universidad\Programacion para internet\ActividadSiete\ActividadSieteServer\src\config\database" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="HTTP Request.rest-api_1#3">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_1#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_1#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -75,6 +100,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api_1#3" />
+        <item itemvalue="HTTP Request.rest-api_1#2" />
+        <item itemvalue="HTTP Request.rest-api_1#1" />
         <item itemvalue="npm.dev" />
         <item itemvalue="HTTP Request.rest-api#1" />
       </list>
@@ -94,7 +122,8 @@
       <workItem from="1622571024269" duration="8000" />
       <workItem from="1623284220543" duration="4387000" />
       <workItem from="1623551230145" duration="4562000" />
-      <workItem from="1623625126954" duration="4070000" />
+      <workItem from="1623625126954" duration="5359000" />
+      <workItem from="1624053437182" duration="8423000" />
     </task>
     <servers />
   </component>

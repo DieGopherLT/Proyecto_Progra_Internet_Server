@@ -1,4 +1,4 @@
-import db from '../config/db';
+import studentsDb from '../../config/database/studentsDb';
 import { Model, ModelCtor, DataTypes, Optional } from 'sequelize';
 
 export interface StudentAttributes {
@@ -15,7 +15,7 @@ interface StudentCreationAttributes extends Optional<StudentAttributes, 'id' | '
 
 export interface StudentInstance extends Model<StudentAttributes, StudentCreationAttributes>, StudentAttributes {}
 
-const Student: ModelCtor<StudentInstance> = db.define<StudentInstance>(process.env.STUDENT_TABLE, {
+const Student: ModelCtor<StudentInstance> = studentsDb.define<StudentInstance>(process.env.STUDENT_TABLE, {
     id: {
         type: DataTypes.INTEGER({ length: 11 }),
         allowNull: false,
@@ -27,7 +27,7 @@ const Student: ModelCtor<StudentInstance> = db.define<StudentInstance>(process.e
         allowNull: false
     },
     Nombre: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.STRING(60),
         allowNull: false
     },
     imagen: {
@@ -38,7 +38,7 @@ const Student: ModelCtor<StudentInstance> = db.define<StudentInstance>(process.e
     Tiempo: {
         type: DataTypes.STRING(10),
         allowNull: false,
-        defaultValue: '00:00'
+        defaultValue: '0'
     },
     Distancia: {
         type: DataTypes.STRING(10),

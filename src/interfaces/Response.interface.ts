@@ -1,5 +1,5 @@
 import { StudentRecord } from './StudentRecord.interface';
-import { StudentInstance } from '../model/Student.model';
+import { ProgressDataInstance } from '../models/VerifyDatabase/ProgressData.model';
 
 export interface UploadResponse{
     msg?: string;
@@ -14,4 +14,9 @@ export interface StudentResponse{
     currentStudentPlace?: number;
     lastPlace?: number;
     date?: string;
+}
+
+export interface ProgressResponse{
+    msg?: string;
+    pendingProgressesList?: ProgressDataInstance[];
 }

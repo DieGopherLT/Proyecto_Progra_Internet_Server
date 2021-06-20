@@ -2,17 +2,15 @@ import { Request, Response } from 'express';
 // import path from 'path';
 // import fs from 'fs';
 
-import Student from '../model/Student.model';
+import Student from '../models/StudentsDatabase/Student.model';
 
 import { StudentBody, StudentParams } from '../interfaces/Request/StudentRequest.interface';
 import { StudentResponse } from '../interfaces/Response.interface';
-import { StudentRecord } from '../interfaces/StudentRecord.interface';
 import {
     currentStudentPositionPromise, currentStudentPromise,
     currentStudentRecordPromise,
     studentRecordListPromise, transformDataFormat,
 } from '../helpers/controllers/studentController.helper';
-import { MergeSort } from '../helpers';
 
 export const createStudent = async (req: Request<any, any, StudentBody>, res: Response<StudentResponse>) => {
 
@@ -41,12 +39,6 @@ export const deleteStudent = async (req: Request<StudentParams>, res: Response<S
 
     try {
         const student = await Student.findOne({ where: { Codigo: code }, rejectOnEmpty: true });
-
-        // if(student.imagen.includes(student.Codigo)){
-        //     const imagePath = path.join(__dirname, `../../../uploads/img-${student.Codigo}.jpg`);
-        //     fs.unlinkSync(imagePath);
-        // }
-
         await student.destroy();
         res.status(200).json({ msg: 'Student eliminated from database' });
     } catch(e) {
