@@ -49,7 +49,12 @@ export const updateProgress = async (req: Request<any, any, any, ProgressQueryPa
 
         const studentDistanceNumber = parseInt(student.Distancia);
         const traveledDistance = parseInt(verifiedUserProgress.distance);
+
+        const studentTimeNumber = parseInt(student.Tiempo);
+        const takenTime = parseInt(verifiedUserProgress.time);
+
         student.Distancia = (studentDistanceNumber + traveledDistance).toString();
+        student.Tiempo = (studentTimeNumber + takenTime).toString();
 
         await Promise.all([student.save(), verifiedUserProgress.destroy()]);
         res.status(200).json({ msg: 'Progreso del estudiante actualizado' });
