@@ -5,3 +5,11 @@ export interface ProgressQueryParams extends Query {
     id: string;
     resolved: '0' | '1';
 }
+
+export interface ProgressBody{
+    code: string;
+    name: string;
+    image: string;
+    distance: string;
+    time: string;
+}

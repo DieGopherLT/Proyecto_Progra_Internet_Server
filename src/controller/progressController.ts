@@ -3,13 +3,20 @@ import { NextFunction, Request, Response } from 'express';
 import ProgressData from '../models/VerifyDatabase/ProgressData.model';
 import Student from '../models/StudentsDatabase/Student.model';
 
-import { ProgressQueryParams } from '../interfaces/Request/ProgressRequest.interface';
+import { ProgressQueryParams, ProgressBody } from '../interfaces/Request/ProgressRequest.interface';
 import { ProgressResponse } from '../interfaces/Response.interface';
 
-export const uploadToVerify = async (req: Request, res: Response<ProgressResponse>) => {
+export const uploadToVerify = async (req: Request<any, any, ProgressBody>, res: Response<ProgressResponse>) => {
 
     try {
-        await ProgressData.create(req.body);
+        console.log(req.body);
+        await ProgressData.create({
+            code: req.body.code,
+            distance: req.body.distance,
+            image: req.body.image,
+            name: req.body.name,
+            time: req.body.time
+        });
         res.status(200).json({ msg: 'Esperando aprobación' })
     }
     catch(e) {
