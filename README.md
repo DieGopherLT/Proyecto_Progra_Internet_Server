@@ -1,5 +1,9 @@
-# Programación para internet - Proyecto/Servidor
+# Programación para internet - Proyecto/Servidor Heroku
 
-Backend del proyecto para programación para internet
+- Alumno: Diego López Torres 
+- Código: 215672951
+- Sección: D01
 
-Hecho en Typescript :^)
+Backend del proyecto para programación para internet, consumido en la app de [React Native](https://github.com/DieGordoLT/Proyecto_Progra_Internet_Client)
+
+Nota del Diego: **¡Hecho con mucho amor en Typescript!**
