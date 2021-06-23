@@ -9,7 +9,6 @@ import { ProgressResponse } from '../interfaces/Response.interface';
 export const uploadToVerify = async (req: Request<any, any, ProgressBody>, res: Response<ProgressResponse>) => {
 
     try {
-        console.log(req.body);
         await ProgressData.create({
             code: req.body.code,
             distance: req.body.distance,

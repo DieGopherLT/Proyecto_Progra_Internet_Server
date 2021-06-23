@@ -11,7 +11,6 @@ import '../models/VerifyDatabase/ProgressData.model';
 //Routing
 import UploadRouter from '../routes/uploads';
 import StudentRouter from '../routes/student';
-// import PicturesRouter from '../routes/picture';
 import ProgressRouter from '../routes/progress';
 
 class Server{
@@ -35,7 +34,7 @@ class Server{
         try {
             await studentsDb.authenticate({ logging: false });
             console.log('Students database connected');
-            await verifyDb.sync({ logging: false });
+            await verifyDb.authenticate({ logging: false });
             console.log('Verify database connected');
         } catch (error) {
             console.log(error);
@@ -53,7 +52,6 @@ class Server{
         this.app.get('/', (req, res) => res.send('Server working'));
         this.app.use(this.apiPaths.upload, UploadRouter);
         this.app.use(this.apiPaths.student, StudentRouter);
-        // this.app.use(this.apiPaths.pictures, PicturesRouter);
         this.app.use(this.apiPaths.progress, ProgressRouter);
     }
 

@@ -8,10 +8,9 @@ export interface ProgressDataAttributes{
     image: string;
     time: string;
     distance: string;
-    verified: 'PENDING' | 'RESOLVED' | 'REJECTED';
 }
 
-interface ProgressDataCreationAttributes extends Optional<ProgressDataAttributes, 'id' | 'verified'> {}
+interface ProgressDataCreationAttributes extends Optional<ProgressDataAttributes, 'id'> {}
 
 export interface ProgressDataInstance extends Model<ProgressDataAttributes, ProgressDataCreationAttributes>,
     ProgressDataAttributes {}
@@ -42,10 +41,6 @@ const ProgressData: ModelCtor<ProgressDataInstance> = verifyDb.define('progress'
         type: DataTypes.STRING(10),
         allowNull: false
     },
-    verified: {
-        type: DataTypes.STRING(15),
-        defaultValue: 'PENDING'
-    }
 },
     {
         timestamps: false,
