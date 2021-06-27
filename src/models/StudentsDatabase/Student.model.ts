@@ -46,7 +46,8 @@ const Student: ModelCtor<StudentInstance> = studentsDb.define<StudentInstance>(p
         defaultValue: '0'
     },
     fecha: {
-        type: DataTypes.STRING(10)
+        type: DataTypes.STRING(10),
+        defaultValue: '27-06-2021'
     }
 },{
     timestamps: false,
