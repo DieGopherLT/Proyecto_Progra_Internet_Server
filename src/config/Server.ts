@@ -24,7 +24,6 @@ class Server{
 
     constructor(){
         this.app = express();
-
         this.connectDatabases();
         this.middlewares();
         this.routes();
