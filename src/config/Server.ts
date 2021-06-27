@@ -31,10 +31,10 @@ class Server{
 
      private async connectDatabases(){
         try {
-            await studentsDb.authenticate({ logging: false });
-            console.log('Students database connected');
             await verifyDb.authenticate({ logging: false });
             console.log('Verify database connected');
+            await studentsDb.authenticate({ logging: false });
+            console.log('Students database connected');
         } catch (error) {
             console.log(error);
             process.exit(1);
