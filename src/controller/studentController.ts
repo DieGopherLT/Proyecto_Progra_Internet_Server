@@ -95,7 +95,7 @@ export const getStudentPosition = async (req: Request<StudentParams>, res: Respo
             currentStudentPositionPromise(sortedRecordStudentList, code),
             currentStudentPromise(sortedRecordStudentList, code)
         ]);
-        const lastPlace = sortedRecordStudentList.length - 1;
+        const lastPlace = sortedRecordStudentList.length;
         const date = transformDataFormat(currentStudent.student.fecha);
 
         res.status(200).json({
