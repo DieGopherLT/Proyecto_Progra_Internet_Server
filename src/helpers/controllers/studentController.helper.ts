@@ -2,9 +2,9 @@ import { StudentRecord } from '../../interfaces/StudentRecord.interface';
 import { StudentInstance } from '../../models/StudentsDatabase/Student.model';
 
 const getStudentRecord = (student: StudentInstance): StudentRecord => {
-    const seconds: number = parseInt(student.Tiempo);
-    const distance: number = parseInt(student.Distancia);
-    const speed: number = parseFloat((distance / seconds).toFixed(2));
+    const seconds = parseInt(student.Tiempo);
+    const distance = parseInt(student.Distancia);
+    const speed = (seconds === 0) ? 0 : parseFloat((distance / seconds).toFixed(2));
 
     return {
         student,
