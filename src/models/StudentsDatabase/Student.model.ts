@@ -15,7 +15,7 @@ interface StudentCreationAttributes extends Optional<StudentAttributes, 'id' | '
 
 export interface StudentInstance extends Model<StudentAttributes, StudentCreationAttributes>, StudentAttributes {}
 
-const Student: ModelCtor<StudentInstance> = studentsDb.define<StudentInstance>(process.env.STUDENT_TABLE, {
+const Student: ModelCtor<StudentInstance> = studentsDb.define<StudentInstance>(process.env.STUDENT_TABLE || 'carrera', {
     id: {
         type: DataTypes.INTEGER({ length: 11 }),
         allowNull: false,

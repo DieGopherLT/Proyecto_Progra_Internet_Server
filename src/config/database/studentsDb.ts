@@ -5,11 +5,11 @@ dotenv.config({ path: '.env' });
 
 const studentsDb = new Sequelize({
     dialect: 'mysql',
-    host: process.env.STUDENTS_DB_HOST,
+    host: process.env.STUDENTS_DB_HOST || 'localhost',
     port: 3306,
-    username: process.env.STUDENTS_DB_USERNAME,
-    password: process.env.STUDENTS_DB_PASSWORD,
-    database: process.env.STUDENTS_DB_NAME
+    username: process.env.STUDENTS_DB_USERNAME || 'root',
+    password: process.env.STUDENTS_DB_PASSWORD || 'root',
+    database: process.env.STUDENTS_DB_NAME || 'actividad-siete'
 });
 
 export default studentsDb;

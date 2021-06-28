@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59d89a0d-1c0b-4cc4-8e56-a179320f49c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/config/database/verifyDb.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/progressController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Request/ProgressRequest.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/VerifyDatabase/ProgressData.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/progress.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/Server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database/studentsDb.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/studentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/studentController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/uploadsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/uploadsController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/controllers/studentController.helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Response.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/StudentRecord.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/StudentRecord.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Student.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StudentsDatabase/Student.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/database/studentsDb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database/studentsDb.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/StudentsDatabase/Student.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/StudentsDatabase/Student.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +47,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/uploads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\buyey\Documents\Universidad\Programacion para internet\ActividadSiete\ActividadSieteServer\node_modules\typescript\lib" />
@@ -124,6 +111,7 @@
       <workItem from="1623551230145" duration="4562000" />
       <workItem from="1623625126954" duration="5359000" />
       <workItem from="1624053437182" duration="8423000" />
+      <workItem from="1624844613532" duration="133000" />
     </task>
     <servers />
   </component>
